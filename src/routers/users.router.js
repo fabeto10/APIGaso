@@ -4,9 +4,9 @@ const User = require('../models/user.model')
 
 const router = new Router()
 
-const serializer = (user) => {
-  return user.toObject({ versionKey: false })
-}
+// const serializer = (user) => {
+//   return user.toObject({ versionKey: false })
+// }
 
 router.get('/', async (req, res) => {
   const users = await paginate(User.find({}), req)
